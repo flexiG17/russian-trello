@@ -1,0 +1,25 @@
+.tooltipWrapper {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+}
+
+.tooltipBody {
+  position: absolute;
+  border-radius: 4px;
+  top: 10%;
+  left: 150%;
+  padding: 6px;
+  color: #000;
+  border: 1px solid #18a9a1;
+  background: #92f1e2;
+  font-size: 14px;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+  &_buttonsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+  }
+}

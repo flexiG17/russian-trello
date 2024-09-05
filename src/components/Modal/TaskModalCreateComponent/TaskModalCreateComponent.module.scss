@@ -1,0 +1,9 @@
+.tasCreate {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  p {
+    line-height: 0;
+  }
+}

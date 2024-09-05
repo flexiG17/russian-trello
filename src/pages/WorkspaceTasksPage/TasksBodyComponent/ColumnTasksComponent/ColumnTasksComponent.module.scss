@@ -1,0 +1,37 @@
+.columnTasks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  width: fit-content;
+  padding: 0 5px;
+  border-radius: 8px;
+
+  &_text {
+    line-height: 0;
+  }
+
+  &_open {
+    background: #c5c4c4;
+  }
+
+  &_inProgress {
+    background: #c2dcf1;
+  }
+
+  &_review {
+    background: #edefab;
+  }
+
+  &_done {
+    background: #98ea8d;
+  }
+}
+
+.cardsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}

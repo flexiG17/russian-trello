@@ -1,0 +1,21 @@
+.taskCard {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  padding: 0 10px;
+
+  border: 1px solid #ababab;
+  border-radius: 8px;
+
+  p {
+    line-height: 0;
+    flex-wrap: wrap;
+    color: #000
+  }
+}
