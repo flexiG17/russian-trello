@@ -1,1 +1,1 @@
-export { default } from './TasksBodyComponent.tsx';
+export { default } from './WorkspaceTasksBodyComponent.tsx';

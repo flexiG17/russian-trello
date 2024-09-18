@@ -1,4 +1,7 @@
 .workspacesPage {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+
+  max-width: 600px;
 }

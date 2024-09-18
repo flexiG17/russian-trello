@@ -5,6 +5,7 @@ import { EModalTypes } from '../../components/Modal/enum/EModalTypes.ts';
 export const initialModalSlice: IModal = {
   isOpen: false,
   type: EModalTypes.WORKSPACE_CREATE,
+  title: ''
 };
 
 export const modalSlice = createSlice({

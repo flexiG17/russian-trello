@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from './TasksBodyComponent.module.scss';
+import styles from './WorkspaceTasksBodyComponent.module.scss';
 import { useParams } from 'react-router-dom';
 import { useWorkspaceTasks } from '../../../hooks/workspace.ts';
 import ColumnTasksComponent from './ColumnTasksComponent';
 import { ETaskStatus } from '../../../constants/enums/ETaskStatus.ts';
 
-const TasksBodyComponent: React.FC = () => {
+const WorkspaceTasksBodyComponent: React.FC = () => {
   const { id } = useParams();
   const workspaceTasksList = useWorkspaceTasks(id!);
 
@@ -52,4 +52,4 @@ const TasksBodyComponent: React.FC = () => {
   );
 };
 
-export default TasksBodyComponent;
+export default WorkspaceTasksBodyComponent;

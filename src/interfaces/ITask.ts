@@ -4,7 +4,7 @@ import { ETaskPriority } from '../constants/enums/ETaskPriority.ts';
 export interface ITask {
   key: string,
   workspaceKey: string,
-  number: `CRP-${string}`,
+  number: `CRP-${string}` | '',
   name: string,
   description: string,
   status: ETaskStatus,

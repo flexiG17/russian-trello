@@ -1,5 +1,6 @@
 export enum ETaskPriority {
-  HIGH = 1,
-  MIDDLE = 2,
-  LOW = 3
+  DEFAULT = '',
+  HIGH = '1',
+  MIDDLE = '2',
+  LOW = '3'
 }

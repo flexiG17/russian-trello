@@ -3,22 +3,27 @@ import WorkspacesTable from './components/WorkspacesTable';
 
 import TableActionsComponent from './components/WorkspacesTable/TableActionsComponent';
 import { useAppSelector } from '../../hooks/redux.ts';
+import Layout from '../../components/Layout/Layout.tsx';
 
 const Modal = lazy(() => import('../../components/Modal'));
+
+import styles from './WorkspacesListPage.module.scss';
 
 const WorkspacesListPage: React.FC = () => {
   const modalState = useAppSelector(state => state.modalReducer);
 
   return (
-    <div>
+    <Layout>
       {modalState.isOpen &&
         <Suspense fallback={<></>}>
           <Modal {...modalState} />
         </Suspense>
       }
-      <TableActionsComponent />
-      <WorkspacesTable />
-    </div>
+      <div className={styles.workspacesPage}>
+        <TableActionsComponent />
+        <WorkspacesTable />
+      </div>
+    </Layout>
   );
 };
 

@@ -1,5 +1,31 @@
+.taskPage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
 .titleWithText {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    line-height: 0;
+  }
+
+  p {
+    line-height: 0;
+  }
+}
+
+.inputField {
+  width: fit-content;
+}
+
+.description {
+  resize: none;
+  max-width: 250px;
+}
+
+.save {
+  width: 100px;
 }

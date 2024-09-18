@@ -1,0 +1,27 @@
+.input {
+  min-width: 200px;
+
+  background: #F5F5F5;
+  border-radius: 6px;
+  border: 1.5px solid #F5F5F5;
+  height: 40px;
+  transition: 0.2s;
+  padding-left: 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  &:focus {
+    border: 1.5px solid #32DFE7;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    color: #AABCBD;
+    font-weight: 300;
+  }
+}

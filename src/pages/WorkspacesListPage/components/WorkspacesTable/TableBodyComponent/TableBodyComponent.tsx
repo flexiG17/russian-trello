@@ -19,6 +19,7 @@ const TableBodyComponent: React.FC<{ table: Table<IWorkspace> }> = ({ table }) =
             key={row.id}
             onClick={() => navigate(`${ERoutes.workspacePathForNavigate}${row.original.key}`)}
             style={{cursor: 'pointer'}}
+            className={styles.tableRow}
           >
             {row.getVisibleCells().map((cell) => {
               return (

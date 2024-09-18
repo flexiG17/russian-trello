@@ -1,10 +1,10 @@
 .workspaceTasks {
   width: 90vw;
   height: 90vh;
+  overflow-y: hidden;
 
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
 
-  gap: 20px
+  gap: 20px;
 }

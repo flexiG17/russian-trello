@@ -7,16 +7,18 @@ import styles
   from '../../../pages/WorkspacesListPage/components/WorkspacesTable/TableActionsComponent/TableActionsComponent.module.scss';
 import { addWorkspace } from '../../../store/reducers/workspaces.ts';
 import { v4 as uuidv4 } from 'uuid';
+import Input from '../../Input/Input.tsx';
 
 const WorkspaceModalCreateComponent: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleAddTable = () => {
-    dispatch(addWorkspace({ key: uuidv4(), name: workspaceName }));
+    dispatch(addWorkspace({ key: uuidv4(), name: workspaceName, tasksCounter: 0 }));
     setWorkspaceName('');
     dispatch(showModal({
       isOpen: false,
       type: EModalTypes.WORKSPACE_CREATE,
+      title: 'Создание таблицы'
     }));
   };
 
@@ -26,14 +28,11 @@ const WorkspaceModalCreateComponent: React.FC = () => {
   return (
     <>
       <div className={styles.form}>
-        <h3 className={styles.fieldTitle}>
-          Название таблицы
-        </h3>
-        <input
-          type="text"
+        <Input
+          type='text'
           value={workspaceName}
-          onChange={handleSetWorkspaceName}
-          placeholder='Введите название таблицы'
+          action={handleSetWorkspaceName}
+          placeholder={'Введите название таблицы'}
         />
       </div>
       <ModalActionsComponent submitButtonAction={handleAddTable} />

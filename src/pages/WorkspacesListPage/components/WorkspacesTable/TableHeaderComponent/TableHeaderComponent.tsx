@@ -1,10 +1,9 @@
 import React from 'react';
 import { flexRender, Table } from '@tanstack/react-table';
-// @ts-ignore
-import { ITableData } from '../../../interfaces/ITableData.ts';
+import { IWorkspace } from '../../../../../interfaces/IWorkspace.ts';
 
 interface ITableHeaderComponentProps {
-  table: Table<ITableData>,
+  table: Table<IWorkspace>,
 }
 
 const TableHeaderComponent: React.FC<ITableHeaderComponentProps> = ({ table }) => {

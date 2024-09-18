@@ -13,9 +13,17 @@
   border: 1px solid #ababab;
   border-radius: 8px;
 
+  transition: 0.3s;
+
   p {
-    line-height: 0;
-    flex-wrap: wrap;
     color: #000
+  }
+
+  &__title {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    box-shadow: 0 0 6px 1px rgba(34, 60, 80, 0.2);
   }
 }

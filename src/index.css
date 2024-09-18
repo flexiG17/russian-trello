@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
 
+  background: #f3f3f3;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

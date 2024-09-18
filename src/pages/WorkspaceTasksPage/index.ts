@@ -1,1 +1,1 @@
-export {default} from './WorkspaceTasksPage.tsx';
+export {default} from './WorkspaceTasksListPage.tsx';

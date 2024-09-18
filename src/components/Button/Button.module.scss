@@ -1,0 +1,27 @@
+.button {
+  width: fit-content;
+
+  background: #FFA812;
+  border-radius: 8px;
+  border: 2px solid #FFA812;
+  cursor: pointer;
+  padding: 5px 25px;
+  transition: 0.3s;
+
+  &:hover {
+    background: #fff;
+    border: 2px solid #FFA812;
+
+    p {
+      color: #FFA812
+    }
+  }
+
+  &_text {
+    color: #fff;
+    font-weight: 600;
+    line-height: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+}

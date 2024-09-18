@@ -21,7 +21,7 @@ const WorkspacesTable = () => {
   });
 
   return (
-    <table>
+    <table style={{borderCollapse: 'collapse'}}>
       <TableHeaderComponent table={table} />
       <TableBodyComponent table={table} />
     </table>

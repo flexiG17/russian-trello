@@ -4,6 +4,7 @@ import { closeModal } from '../../../store/reducers/modal.ts';
 
 import styles from '../Modal.module.scss'
 import { useAppSelector } from '../../../hooks/redux.ts';
+import Button from '../../Button/Button.tsx';
 
 interface IModalActions {
   submitButtonAction: () => void,
@@ -17,9 +18,7 @@ const ModalActionsComponent: React.FC<IModalActions> = ({submitButtonAction}) =>
 
   return (
     <div className={styles.modal_buttonGroup}>
-      <button onClick={submitButtonAction}>
-        {submitButton && submitButton.text ? submitButton.text : 'Ок'}
-      </button>
+      <Button text={submitButton && submitButton.text ? submitButton.text : 'Ок'} action={submitButtonAction} />
       <button onClick={handleCloseModal}>
         {closeButton && closeButton.text ? closeButton.text : 'Отменить'}
       </button>

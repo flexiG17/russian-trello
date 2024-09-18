@@ -1,9 +1,9 @@
 import React from 'react';
 import { ITask } from '../../../../../interfaces/ITask.ts';
-
-import styles from './TaskCardComponent.module.scss';
 import { Link } from 'react-router-dom';
 import { ERoutes } from '../../../../../constants/enums/ERoutes.ts';
+
+import styles from './TaskCardComponent.module.scss';
 
 const TaskCardComponent: React.FC<{ task: ITask }> = ({ task }) => {
 
@@ -13,7 +13,7 @@ const TaskCardComponent: React.FC<{ task: ITask }> = ({ task }) => {
       className={styles.taskCard}
       key={task.key}
     >
-      <p>
+      <p className={styles.taskCard__title}>
         №{task.number}
       </p>
       <p>

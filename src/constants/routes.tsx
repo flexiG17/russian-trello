@@ -3,7 +3,7 @@ import { ERoutes } from './enums/ERoutes.ts';
 import { lazy, Suspense } from 'react';
 
 const WorkspacesListPage = lazy(() => import('../pages/WorkspacesListPage'));
-const WorkspacePage = lazy(() => import('../pages/WorkspaceTasksPage/WorkspaceTasksPage.tsx'));
+const WorkspacePage = lazy(() => import('../pages/WorkspaceTasksPage/WorkspaceTasksListPage.tsx'));
 const TaskPage = lazy(() => import('../pages/TaskPage'));
 
 export const appRoutesList: RouteObject[] = [{

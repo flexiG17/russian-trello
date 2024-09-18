@@ -7,9 +7,8 @@ interface IModalButton {
 export interface IModal {
   isOpen: boolean,
   type: EModalTypes,
+  title: string,
   workspaceKey?: string,
-  // children?: ReactNode,
-  // handleOpenModal: () => void,
   submitButton?: IModalButton,
   closeButton?: IModalButton,
 }
