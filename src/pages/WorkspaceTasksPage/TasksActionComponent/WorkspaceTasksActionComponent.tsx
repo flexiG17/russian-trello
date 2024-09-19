@@ -16,6 +16,7 @@ const WorkspaceTasksActionComponent: React.FC = () => {
     dispatch(showModal({
       isOpen: true,
       type: EModalTypes.TASK_CREATE,
+      title: 'Создать задачу'
     }));
   }, [dispatch]);
 
@@ -32,9 +33,7 @@ const WorkspaceTasksActionComponent: React.FC = () => {
       <SortTaskActionComponent field='name' title='название' />
       <SortTaskActionComponent field='createdAt' title='дата создания' />
       <SortTaskActionComponent field='priority' title='приоритет' />
-      <button onClick={handleDropFilters}>
-        Сбросить фильтры
-      </button>
+      <Button action={handleDropFilters} text='Сбросить' type='cancel' />
     </div>
   );
 };

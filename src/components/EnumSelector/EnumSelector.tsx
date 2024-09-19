@@ -3,6 +3,7 @@ import { ETaskPriority } from '../../constants/enums/ETaskPriority.ts';
 import { ETaskStatus } from '../../constants/enums/ETaskStatus.ts';
 
 import styles from './EnumSelector.module.scss'
+import inputStyles from '../Input/Input.module.scss'
 
 export const getEnumFields = (type: typeof ETaskPriority | typeof ETaskStatus) => {
   if (type === ETaskPriority) {
@@ -27,7 +28,7 @@ const EnumSelector: React.FC<IEnumSelector> = ({ value, setValue, field }) => {
       id="taskPrioritySelect"
       value={value}
       onChange={setValue}
-      className={styles.enumSelector}
+      className={`${styles.enumSelector} ${inputStyles.input}`}
     >
       <option value="" hidden>
         Выберите {field === ETaskStatus ? 'статус' : 'приоритет'}

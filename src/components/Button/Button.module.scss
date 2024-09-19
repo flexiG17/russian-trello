@@ -1,21 +1,10 @@
 .button {
   width: fit-content;
 
-  background: #FFA812;
   border-radius: 8px;
-  border: 2px solid #FFA812;
   cursor: pointer;
   padding: 5px 25px;
   transition: 0.3s;
-
-  &:hover {
-    background: #fff;
-    border: 2px solid #FFA812;
-
-    p {
-      color: #FFA812
-    }
-  }
 
   &_text {
     color: #fff;
@@ -23,5 +12,37 @@
     line-height: 0;
     font-size: 14px;
     letter-spacing: 0.5px;
+  }
+
+  &_sumbit {
+    background: #FFA812;
+    border: 2px solid #FFA812;
+
+    &:hover {
+      background: #fff;
+      border: 2px solid #FFA812;
+
+      p {
+        color: #FFA812
+      }
+    }
+  }
+
+  &_cancel {
+    background: #fff;
+    border: 1px solid #989898;
+
+    p {
+      color: #494949;
+    }
+
+    &:hover {
+      background: #d2d2d2;
+      border: 1px solid #b0b0b0;
+
+      p {
+        color: #282828;
+      }
+    }
   }
 }

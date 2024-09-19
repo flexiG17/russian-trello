@@ -3,8 +3,9 @@ import { useAppDispatch } from '../../../../hooks/redux.ts';
 import { SortSymbolType } from '../../../../constants/types/SortSymbolType.ts';
 
 import { setSort } from '../../../../store/reducers/tasks.ts';
-import styles from '../WorkspaceTasksActionComponent.module.scss';
 import { TaskSortFieldType } from '../../../../constants/types/TaskSortFieldType.ts';
+
+import styles from './SortTaskActionComponent.module.scss';
 
 interface ISortTaskActionComponent {
   field: TaskSortFieldType,
@@ -27,7 +28,7 @@ const SortTaskActionComponent: React.FC<ISortTaskActionComponent> = ({ field, ti
   };
 
   return (
-    <>
+    <div className={styles.sortComponent}>
       <span>
         {title}
       </span>
@@ -42,7 +43,7 @@ const SortTaskActionComponent: React.FC<ISortTaskActionComponent> = ({ field, ti
         onClick={() => handleChangeSortType('ASC')}>
         ▼
       </button>
-    </>
+    </div>
   );
 };
 

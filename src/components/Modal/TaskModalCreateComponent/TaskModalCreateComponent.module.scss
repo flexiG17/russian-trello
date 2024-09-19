@@ -1,9 +1,10 @@
-.tasCreate {
+.taskCreate {
   display: flex;
   flex-direction: column;
   gap: 5px;
 
-  p {
+  &_text {
     line-height: 0;
+    color: #343538;
   }
 }

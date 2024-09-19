@@ -11,7 +11,6 @@ import GetComponentByModalType from './ComponentByModalType.tsx';
 const Modal: React.FC<IModal> = (props) => {
   const dispatch = useAppDispatch();
 
-  console.log(props);
   const handleCloseModal = () => {
     dispatch(closeModal())
   }

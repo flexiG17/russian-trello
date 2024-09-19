@@ -6,6 +6,8 @@ import { ETaskPriority } from '../../../constants/enums/ETaskPriority.ts';
 import { ETaskStatus } from '../../../constants/enums/ETaskStatus.ts';
 import { ITask } from '../../../interfaces/ITask.ts';
 import EnumSelector from '../../../components/EnumSelector/EnumSelector.tsx';
+import Textarea from "../../../components/Textarea/Textarea.tsx";
+import Input from "../../../components/Input/Input.tsx";
 
 interface ITaskFieldComponent {
   title: string,
@@ -42,24 +44,19 @@ const TaskFieldComponent: React.FC<ITaskFieldComponent>
             :
             field === 'description'
               ?
-              <textarea
-                name=""
-                id=""
+              <Textarea
                 value={initValue instanceof Date ? initValue.toISOString().slice(0, 16) : initValue}
-                onChange={(e) => changeTaskField(field, e.target.value)}
+                action={(e) => changeTaskField(field, e.target.value)}
                 cols={20}
                 rows={5}
-                className={styles.description}
               />
               :
-              <input
+              <Input
                 type={type}
-                name={field}
-                disabled={type === 'datetime-local'}
-                className={styles.inputField}
-                autoFocus={true}
                 value={initValue instanceof Date ? initValue.toISOString().slice(0, 16) : initValue}
-                onChange={(e) => changeTaskField(field, e.target.value)}
+                action={(e) => changeTaskField(field, e.target.value)}
+                autoFocus={true}
+                disabled={type === 'datetime-local'}
               />
           :
           <p>{initValue instanceof Date ? initValue.toLocaleString() : initValue}</p>

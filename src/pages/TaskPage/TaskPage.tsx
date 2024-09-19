@@ -10,6 +10,7 @@ import { changeTask } from '../../store/reducers/tasks.ts';
 import { ITask } from '../../interfaces/ITask.ts';
 import { ETaskStatus } from '../../constants/enums/ETaskStatus.ts';
 import { ETaskPriority } from '../../constants/enums/ETaskPriority.ts';
+import Button from "../../components/Button/Button.tsx";
 
 const TaskPage = () => {
   const { id } = useParams();
@@ -48,12 +49,7 @@ const TaskPage = () => {
     <div className={styles.taskPage}>
       {isEditMode
         ?
-        <button
-          className={styles.save}
-          onClick={handleCloseEditMode}
-        >
-          сохранить
-        </button>
+        <Button text='сохранить' action={handleCloseEditMode}/>
         :
         <TaskActionsComponent setIsEditMode={handleChangeEditMode} />
       }

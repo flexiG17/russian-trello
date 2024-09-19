@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { deleteTask } from '../../../store/reducers/tasks.ts';
 import { ERoutes } from '../../../constants/enums/ERoutes.ts';
 import { useTask } from '../../../hooks/task.ts';
+import Button from "../../../components/Button/Button.tsx";
 
 interface ITaskActions {
   setIsEditMode: () => void;
@@ -22,12 +23,8 @@ const TaskActionsComponent: React.FC<ITaskActions> = ({setIsEditMode}) => {
 
   return (
     <div style={{display: 'flex', gap: '15px'}}>
-      <button style={{ width: 'fit-content'}} onClick={setIsEditMode}>
-        редактировать
-      </button>
-      <button style={{ width: 'fit-content'}} onClick={handleDeleteTask}>
-        удалить
-      </button>
+      <Button text='редактировать' action={setIsEditMode}/>
+      <Button text='удалить' action={handleDeleteTask} type='cancel'/>
     </div>
   )
 }

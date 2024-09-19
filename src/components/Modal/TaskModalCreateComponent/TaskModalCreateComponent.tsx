@@ -11,6 +11,9 @@ import { addTask } from '../../../store/reducers/tasks.ts';
 import { ETaskStatus } from '../../../constants/enums/ETaskStatus.ts';
 import { useWorkspaceTasksCounter } from '../../../hooks/workspace.ts';
 import { setTasksCounter } from '../../../store/reducers/workspaces.ts';
+import Input from "../../Input/Input.tsx";
+import EnumSelector from "../../EnumSelector/EnumSelector.tsx";
+import Textarea from "../../Textarea/Textarea.tsx";
 
 const TaskModalCreateComponent = () => {
   const [name, setName] = useState('');
@@ -40,53 +43,34 @@ const TaskModalCreateComponent = () => {
   }, [description, dispatch, id, name, priority, workspaceTasksCounter]);
 
   return (
-    <div className={styles.tasCreate}>
-      <h4>
-        Создать задачу
-      </h4>
-      <p>
+    <div className={styles.taskCreate}>
+      <p className={styles.taskCreate_text}>
         Название
       </p>
-      <input
-        type="text"
+      <Input
         value={name}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => {
+        type="text"
+        action={(e: ChangeEvent<HTMLInputElement>) => {
           setName(e.target.value);
         }}
         placeholder="Введите название задачи"
       />
-      <p>
+      <p className={styles.taskCreate_text}>
         Описание
       </p>
-      <textarea
-        style={{ resize: 'none' }}
+      <Textarea
         value={description}
-        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
+        placeholder="Введите описание задачи"
+        action={(e: ChangeEvent<HTMLTextAreaElement>) => {
           setDescription(e.target.value);
         }}
-        placeholder="Введите описание задачи"
-        rows={4}
       />
-      <p>
+      <p className={styles.taskCreate_text}>
         Приоритет
       </p>
-      <select
-        name="taskPriority"
-        value={priority}
-        onChange={(e: ChangeEvent<HTMLSelectElement>) => {
-          setPriority(e.target.value as any);
-        }}
-      >
-        <option value={ETaskPriority.LOW}>
-          Низкий
-        </option>
-        <option value={ETaskPriority.MIDDLE}>
-          Средний
-        </option>
-        <option value={ETaskPriority.HIGH}>
-          Высокий
-        </option>
-      </select>
+      <EnumSelector field={ETaskPriority} value={priority} setValue={(e: ChangeEvent<HTMLSelectElement>) => {
+        setPriority(e.target.value as any);
+      }} />
       <ModalActionsComponent submitButtonAction={handleCreateTask} />
     </div>
   );

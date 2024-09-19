@@ -3,6 +3,7 @@ import { changeWorkspaceName } from '../../../store/reducers/workspaces.ts';
 import ModalActionsComponent from '../ModalActionsComponent/ModalActionsComponent.tsx';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux.ts';
 import { closeModal } from '../../../store/reducers/modal.ts';
+import Input from "../../Input/Input.tsx";
 
 const WorkspaceModalUpdateComponent: React.FC = () => {
   const [newWorkspaceName, setNewWorkspaceName] = useState('');
@@ -23,13 +24,7 @@ const WorkspaceModalUpdateComponent: React.FC = () => {
 
   return (
     <>
-      Изменить название таблицы
-      <input
-        type="text"
-        value={newWorkspaceName}
-        onChange={handleChangeNewWorkspaceName}
-        placeholder='Введите новое название таблицы'
-      />
+      <Input value={newWorkspaceName} action={handleChangeNewWorkspaceName} placeholder='Введите новое название' />
       <ModalActionsComponent submitButtonAction={handleSetNewWorkspaceName} />
     </>
   );

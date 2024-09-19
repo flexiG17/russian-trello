@@ -1,9 +1,10 @@
 .input {
   min-width: 200px;
+  max-width: 300px;
 
   background: #F5F5F5;
   border-radius: 6px;
-  border: 1.5px solid #F5F5F5;
+  border: 1.5px solid #cbcbcb;
   height: 40px;
   transition: 0.2s;
   padding-left: 10px;
@@ -11,8 +12,13 @@
   font-size: 14px;
   font-weight: 500;
 
+  &:hover {
+    border: 1.5px solid #32DFE7;
+  }
+
   &:focus {
     border: 1.5px solid #32DFE7;
+    background: #efefef;
   }
 
   &:focus {

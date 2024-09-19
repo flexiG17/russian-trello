@@ -12,7 +12,8 @@ const UpdateWorkspaceComponent: React.FC<{ workspaceKey: string }> = ({ workspac
     dispatch(showModal({
       isOpen: true,
       type: EModalTypes.WORKSPACE_UPDATE,
-      workspaceKey
+      workspaceKey,
+      title: 'Изменить таблицу'
     }));
   };
 

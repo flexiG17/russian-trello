@@ -18,10 +18,16 @@ const ModalActionsComponent: React.FC<IModalActions> = ({submitButtonAction}) =>
 
   return (
     <div className={styles.modal_buttonGroup}>
-      <Button text={submitButton && submitButton.text ? submitButton.text : 'Ок'} action={submitButtonAction} />
-      <button onClick={handleCloseModal}>
-        {closeButton && closeButton.text ? closeButton.text : 'Отменить'}
-      </button>
+      <Button
+        text={submitButton && submitButton.text ? submitButton.text : 'Ок'}
+        action={submitButtonAction}
+        type='submit'
+      />
+      <Button
+        text={closeButton && closeButton.text ? closeButton.text : 'Отменить'}
+        action={handleCloseModal}
+        type='cancel'
+      />
     </div>
   )
 }

@@ -10,7 +10,8 @@ const DeleteWorkspaceComponent: React.FC<{ workspaceKey: string }> = ({workspace
     dispatch(showModal({
       isOpen: true,
       type: EModalTypes.WORKSPACE_DELETE,
-      workspaceKey
+      workspaceKey,
+      title: 'Удалить таблицу'
     }));
   };
 
